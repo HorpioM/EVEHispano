@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    background-image: url('https://images4.alphacoders.com/197/197024.jpg');
+    background-size: cover; /* Esto hará que la imagen cubra toda la ventana del navegador */
+    background-repeat: no-repeat; /* Esto evitará que la imagen se repita si es más pequeña que la ventana */
+    background-attachment: fixed; /* Esto hará que el fondo no se desplace con el contenido */
+}
+header, section, footer {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #333;
+}
+
+a {
+    color: #0077cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+}
+.banner {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.banner img {
+    max-width: 100%; /* Esto asegura que el banner no sea más ancho que la ventana del navegador */
+    height: auto; /* Esto mantiene la proporción de la imagen */
+}
