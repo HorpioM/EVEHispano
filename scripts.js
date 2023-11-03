@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Lista de todos los archivos de rankings que has creado (puedes automatizar la actualización de esta lista si usas alguna herramienta de compilación o script)
     const rankingsFiles = [
-        
+
+        "corporaciones_2023-11-03_19_21_21.html",
         "corporaciones_2023-11-02_12_56_14.html",
         "corporaciones_2023-11-02_05_16_41.html",
         "corporaciones_2023-11-02_02_21_27.html",
