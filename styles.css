@@ -41,3 +41,9 @@ footer {
     max-width: 100%; /* Esto asegura que el banner no sea más ancho que la ventana del navegador */
     height: auto; /* Esto mantiene la proporción de la imagen */
 }
+.banner iframe {
+    width: 100%;
+    height: auto;
+    max-height: 400px; /* Ajusta esto según el espacio que quieras que ocupe en la cabecera */
+    border: none; /* Elimina el borde del iframe */
+}
