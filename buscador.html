@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rastreador Web Simple</title>
+</head>
+<body>
+    <h1>Rastreador Web Simple</h1>
+    <input type="text" id="urlInput" placeholder="Ingresa la URL aquí" style="width: 300px;">
+    <button id="fetchButton">Rastrear</button>
+    <div id="results"></div>
+
+    <script>
+        document.getElementById('fetchButton').addEventListener('click', function() {
+            const url = document.getElementById('urlInput').value;
+            if(url) {
+                fetch(url)
+                    .then(response => {
+                        if(response.ok) {
+                            return response.text();
+                        } else {
+                            throw new Error('No se pudo cargar la página.');
+                        }
+                    })
+                    .then(html => {
+                        const parser = new DOMParser();
+                        const doc = parser.parseFromString(html, 'text/html');
+                        const corpsToFind = ['Rekium', 'CRUZADOS', 'Helgast Militarum'];
+                        let results = corpsToFind.map(corp => {
+                            return {
+                                name: corp,
+                                found: doc.body.textContent.includes(corp)
+                            };
+                        });
+
+                        displayResults(results);
+                    })
+                    .catch(error => {
+                        document.getElementById('results').textContent = error.message;
+                    });
+            } else {
+                alert('Por favor, ingresa una URL.');
+            }
+        });
+
+        function displayResults(results) {
+            const resultsContainer = document.getElementById('results');
+            resultsContainer.innerHTML = ''; // Clear previous results
+            results.forEach(result => {
+                const resultElement = document.createElement('div');
+                resultElement.textContent = result.name + ': ' + (result.found ? 'Encontrado' : 'No encontrado');
+                resultsContainer.appendChild(resultElement);
+            });
+        }
+    </script>
+</body>
+</html>
