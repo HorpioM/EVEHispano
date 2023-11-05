@@ -3,39 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Añadir FontAwesome para los íconos -->
+    <meta property="og:title" content="EVE Hispano Rankings" />
+    <meta property="og:description" content="Listado de rankings de corporaciones en EVE Online para la comunidad hispana." />
+    <meta property="og:image" content="URL_DE_LA_IMAGEN_DE_COMPARTIR" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>EVE Hispano Rankings</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Si tienes un archivo CSS para estilos -->
+    <link rel="stylesheet" href="styles.css">
     <script src="scripts.js" defer></script>
 </head>
 <body>
     <header>
-    <div class="banner">
-       <img src="https://cdn.discordapp.com/attachments/1168139468637732966/1169326948669997156/image.png?ex=6554ff95&is=65428a95&hm=70bc779bdf91ecb6237b4c23fba7cd002fa5fd407d0c53a88379bfc44c366696&" alt="Descripción del banner">
-    </div>
-
-        <h1>EVE Hispano</h1>
-        <p>Listado de rankings de corporaciones.</p>
-    <a href="https://www.youtube.com/@eveonlineenespanhol/videos" target="_blank" style="margin-left: 10px;"><i class="fab fa-youtube fa-4x"></i> YouTube</a>
-    <a href="https://discord.gg/su5xAAfR" target="_blank" style="margin-left: 10px;"><i class="fab fa-discord fa-4x"></i> Discord</a>
-    <div class="banner">
-        <!-- Incrustar video de YouTube -->
-       <iframe src="https://www.youtube.com/embed/9p47YeTbQjM" title="RANKING DE CORPORACIONES HISPANAS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-       <iframe src="https://www.youtube.com/embed/3NnRQFapL9k" title="LA PROFECIA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
+        <div class="banner">
+            <img src="https://cdn.discordapp.com/attachments/1168139468637732966/1170570699472109588/image.png" alt="Banner de EVE Hispano">
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Ranking.html">Ranking</a></li>
+                <li><a href="Tutoriales.html">Tutoriales</a></li>
+                <li><a href="Noticias.html">Noticias</a></li>
+                <li><a href="Discord.html">Discord</a></li>
+                <li><a href="Herramientas.html">Herramientas</a></li>
+            </ul>
+        </nav>
+        <div class="social-links">
+            <a href="https://www.youtube.com/@eveonlineenespanhol/videos" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+            <a href="https://discord.gg/su5xAAfR" target="_blank"><i class="fab fa-discord fa-2x"></i></a>
+        </div>
     </header>
-   
-    <section id="rankings">
-        <h2>Rankings</h2>
-        <ul id="rankings-list">
+    
+    <main>
+        <section id="intro">
+            <h1>Buenos días por la mañana !!!!</h1>
+			
+			<p>Bienvenidos al Café de HorpioM</p>
+            <p>Tomad asiento y acomodaos en este espacio dedicado a la pasión que compartimos por EVE Online. El Café de HorpioM esta pensado como un punto de encuentro, donde la comunidad hispana se pueda reunir para intercambiar conocimientos, estrategias y vivencias en el vasto universo de EVE.
+				Aquí, enlazados con nuestro canal de Discord y YouTube, encontraréis contenido variado y enriquecedor que os sumergirá aún más en el lore de nuestra comunidad y en todos los acontecimientos que dan vida a nuestra experiencia en el juego.
+				Desde tutoriales hasta las últimas noticias, pasando por acalorados debates, análisis y especulaciones sobre el metajuego. Todo está diseñado para que disfrutéis al máximo de cada aspecto de EVE Online y podais conectar con la comunidad hispana dentro del juego.
+				Así que, ya sea que estéis buscando consejos para vuestra próxima misión, detalles sobre la historia del juego, una corporacion, queriais filtrar informacion sobre buestros enemigos o simplemente queréis estar al día con el "salseo" de la comunidad, habéis llegado al lugar correcto.
+				No olvidéis pasar por nuestras redes al final de la página para seguir conectados. Y ahora, servíos un buen café y desdokear.</p>
+			<h1>¡Fly safe! o7.</h1>
+        </section>
+        
+		<section id="video">
+			<h1>EVE Online en Español</h1> 
+			<a href="https://www.youtube.com/@eveonlineenespanhol/videos" target="_blank" title="Visita nuestro canal de YouTube">
+				<i class="fab fa-youtube fa-2x"></i>
+			</a>
+			<p>Dale una mirada a nuestros últimos videos</p>
+			<div class="video-container">
+				<div class="video-column">
+					<iframe src="https://www.youtube.com/embed/9p47YeTbQjM" title="Video de EVE Online en Español" frameborder="0" allowfullscreen></iframe>
+					<iframe src="https://www.youtube.com/embed/kE5qmdcDdKE" title="FURIA HISPANA: LA SALIDA DE SPECTRUMCON, CIUDADANO AMARR" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<div class="video-column">
+					<iframe src="https://www.youtube.com/embed/3NnRQFapL9k" title="LA PROFECIA" frameborder="0" allowfullscreen></iframe>
+					<iframe src="https://www.youtube.com/embed/Ibwh6utddA0" title="ARSÉNICO: Una democracia a favor de los pilotos" frameborder="0" allowfullscreen></iframe>
+				</div>
+			</div>
+		</section>
+        
+        <section id="rankings">
+            <h2>Rankings</h2>
+			<ul id="rankings-list">
             <!-- Aquí se insertarán los enlaces de manera dinámica con JavaScript -->
-        </ul>
-    </section>
+            </ul>
+            
+        </section>
+    </main>
+    
     <footer>
         <p>© 2023 EVE Hispano. Todos los derechos reservados.</p>
-    <a href="https://www.youtube.com/@eveonlineenespanhol/videos" target="_blank" style="margin-left: 10px;"><i class="fab fa-youtube fa-4x"></i> YouTube</a>
-    <a href="https://discord.gg/su5xAAfR" target="_blank" style="margin-left: 10px;"><i class="fab fa-discord fa-4x"></i> Discord</a>
+        <div class="social-links">
+            <a href="https://www.youtube.com/@eveonlineenespanhol/videos" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+            <a href="https://discord.gg/su5xAAfR" target="_blank"><i class="fab fa-discord fa-2x"></i></a>
+        </div>
     </footer>
 </body>
 </html>
