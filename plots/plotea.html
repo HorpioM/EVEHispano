@@ -1,59 +1,71 @@
+
+Entiendo, si tu JSON consiste en una lista de objetos como el que has proporcionado, primero debes cargar el archivo JSON y luego procesarlo para obtener los nombres de las corporaciones y sus respectivos "Kills". Aquí tienes un ejemplo de cómo podrías hacerlo utilizando fetch para cargar el JSON y Chart.js para crear el gráfico:
+
+Primero, asegúrate de que tu archivo JSON es un arreglo de objetos JSON como este:
+
+json
+Copy code
+[
+  {
+    "Corp": "<a href='https://zkillboard.com/corporation/98628176/' target='_blank'>Helgast Militarum</a>",
+    "Kills": 77.01
+    // ...otros datos
+  },
+  // ...otros objetos
+]
+Aquí tienes un ejemplo completo de cómo sería el HTML con JavaScript para cargar el JSON y crear el gráfico:
+
+html
+Copy code
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Chart Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gráfico de Barras de Corporaciones y Kills</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-pepepepepe
-<div>
-  <canvas id="myChart"></canvas>
-</div>
+  <canvas id="myChart" width="400" height="400"></canvas>
 
-<script>
-  // Suponiendo que tu archivo se llama 'data.json' y está en el mismo directorio que tu HTML
-  fetch('corporaciones_2023-11-06_21_56_20.json')
-    .then(response => response.json())
-    .then(jsonData => {
-      // Imprimir los datos en la consola
-      console.log('Datos cargados:', jsonData);
+  <script>
+    // Función para extraer el nombre de la corporación del HTML
+    function extractCorpName(htmlString) {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(htmlString, 'text/html');
+      return doc.body.textContent || "";
+    }
 
-      // Preparar los datos para Chart.js
-      const data = {
-        labels: jsonData.map(item => item['HorpioM Rank']),
-        datasets: [{
-          label: 'K Kills',
-          data: jsonData.map(item => item['K Kills']),
-          backgroundColor: 'rgba(255, 99, 132, 0.2)',
-          borderColor: 'rgba(255, 99, 132, 1)',
-          borderWidth: 1
-        }]
-      };
+    fetch('ruta/a/tu/archivo.json')
+      .then(response => response.json())
+      .then(data => {
+        // Asumiendo que 'data' es un arreglo de objetos como los que mostraste
+        const labels = data.map(item => extractCorpName(item.Corp));
+        const killsData = data.map(item => item.Kills);
 
-      // Configuración del gráfico
-      const config = {
-        type: 'bar',
-        data: data,
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const myChart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: labels,
+            datasets: [{
+              label: 'Kills',
+              data: killsData,
+              backgroundColor: 'rgba(0, 123, 255, 0.5)',
+              borderColor: 'rgba(0, 123, 255, 1)',
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
             }
           }
-        }
-      };
-
-      // Crear el gráfico
-      new Chart(
-        document.getElementById('myChart'),
-        config
-      );
-    })
-    .catch(error => {
-      console.error('Error al cargar los datos:', error);
-    });
-</script>
-
+        });
+      })
+      .catch(error => console.error('Error al cargar los datos:', error));
+  </script>
 </body>
 </html>
