@@ -1,5 +1,5 @@
 
 document.addEventListener("DOMContentLoaded", function() {
     const rankingsList = document.getElementById("rankings-list");
-    rankingsList.insertAdjacentHTML("beforeend", `<li><a href="Ranking/corporaciones_2023-11-06_12_59_07.html">corporaciones_2023-11-06_12_59_07</a></li>`);
+    rankingsList.insertAdjacentHTML("beforeend", `<li><a href="Ranking/corporaciones_2023-11-07_06_54_08.html">corporaciones_2023-11-07_06_54_08</a></li>`);
 });
