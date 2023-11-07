@@ -2,6 +2,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const rankingsList = document.getElementById("rankings-list");
     rankingsList.insertAdjacentHTML("beforeend", `<li><a href="Ranking/plotea dara.html">plotea dara</a></li>`);
+    rankingsList.insertAdjacentHTML("beforeend", `<li><a href="Ranking/corporaciones_2023-11-07_06_54_08.html">corporaciones_2023-11-07_06_54_08</a></li>`);
     rankingsList.insertAdjacentHTML("beforeend", `<li><a href="Ranking/corporaciones_2023-11-07_06_34_16.html">corporaciones_2023-11-07_06_34_16</a></li>`);
     rankingsList.insertAdjacentHTML("beforeend", `<li><a href="Ranking/corporaciones_2023-11-07_06_30_43.html">corporaciones_2023-11-07_06_30_43</a></li>`);
     rankingsList.insertAdjacentHTML("beforeend", `<li><a href="Ranking/corporaciones_2023-11-07_03_35_19.html">corporaciones_2023-11-07_03_35_19</a></li>`);
