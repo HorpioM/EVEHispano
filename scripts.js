@@ -1,7 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", function() {
     const rankingsList = document.getElementById("rankings-list");
-    rankingsList.insertAdjacentHTML("beforeend", `<li><a href="Ranking/plotea dara.html">plotea dara</a></li>`);
     rankingsList.insertAdjacentHTML("beforeend", `<li><a href="Ranking/corporaciones_2023-11-07_07_02_25.html">corporaciones_2023-11-07_07_02_25</a></li>`);
     rankingsList.insertAdjacentHTML("beforeend", `<li><a href="Ranking/corporaciones_2023-11-07_06_54_08.html">corporaciones_2023-11-07_06_54_08</a></li>`);
     rankingsList.insertAdjacentHTML("beforeend", `<li><a href="Ranking/corporaciones_2023-11-07_06_34_16.html">corporaciones_2023-11-07_06_34_16</a></li>`);
@@ -31,6 +30,6 @@ document.addEventListener("DOMContentLoaded", function() {
     rankingsList.insertAdjacentHTML("beforeend", `<li><a href="Ranking/corporaciones_2023-11-01_19_26_11.html">corporaciones_2023-11-01_19_26_11</a></li>`);
     rankingsList.insertAdjacentHTML("beforeend", `<li><a href="Ranking/corporaciones_2023-11-01_19_22_55.html">corporaciones_2023-11-01_19_22_55</a></li>`);
     rankingsList.insertAdjacentHTML("beforeend", `<li><a href="Ranking/corporaciones_2023-11-01_19_05_28.html">corporaciones_2023-11-01_19_05_28</a></li>`);
-    rankingsList.insertAdjacentHTML("beforeend", `<li><a href="Ranking/corporaciones.html">corporaciones</a></li>`);
+    
 
 });
