@@ -1,6 +1,13 @@
 
 document.addEventListener("DOMContentLoaded", function() {
     const rankingsList = document.getElementById("rankings-list");
+    rankingsList.insertAdjacentHTML("beforeend", `<li><a href="Ranking/plotea dara.html">plotea dara</a></li>`);
+    rankingsList.insertAdjacentHTML("beforeend", `<li><a href="Ranking/corporaciones_2023-11-07_06_34_16.html">corporaciones_2023-11-07_06_34_16</a></li>`);
+    rankingsList.insertAdjacentHTML("beforeend", `<li><a href="Ranking/corporaciones_2023-11-07_06_30_43.html">corporaciones_2023-11-07_06_30_43</a></li>`);
+    rankingsList.insertAdjacentHTML("beforeend", `<li><a href="Ranking/corporaciones_2023-11-07_03_35_19.html">corporaciones_2023-11-07_03_35_19</a></li>`);
+    rankingsList.insertAdjacentHTML("beforeend", `<li><a href="Ranking/corporaciones_2023-11-06_22_59_35.html">corporaciones_2023-11-06_22_59_35</a></li>`);
+    rankingsList.insertAdjacentHTML("beforeend", `<li><a href="Ranking/corporaciones_2023-11-06_22_45_32.html">corporaciones_2023-11-06_22_45_32</a></li>`);
+    rankingsList.insertAdjacentHTML("beforeend", `<li><a href="Ranking/corporaciones_2023-11-06_22_38_28.html">corporaciones_2023-11-06_22_38_28</a></li>`);
     rankingsList.insertAdjacentHTML("beforeend", `<li><a href="Ranking/corporaciones_2023-11-06_12_59_07.html">corporaciones_2023-11-06_12_59_07</a></li>`);
     rankingsList.insertAdjacentHTML("beforeend", `<li><a href="Ranking/corporaciones_2023-11-05_09_13_30.html">corporaciones_2023-11-05_09_13_30</a></li>`);
     rankingsList.insertAdjacentHTML("beforeend", `<li><a href="Ranking/corporaciones_2023-11-04_13_27_35.html">corporaciones_2023-11-04_13_27_35</a></li>`);
@@ -22,5 +29,6 @@ document.addEventListener("DOMContentLoaded", function() {
     rankingsList.insertAdjacentHTML("beforeend", `<li><a href="Ranking/corporaciones_2023-11-01_19_26_11.html">corporaciones_2023-11-01_19_26_11</a></li>`);
     rankingsList.insertAdjacentHTML("beforeend", `<li><a href="Ranking/corporaciones_2023-11-01_19_22_55.html">corporaciones_2023-11-01_19_22_55</a></li>`);
     rankingsList.insertAdjacentHTML("beforeend", `<li><a href="Ranking/corporaciones_2023-11-01_19_05_28.html">corporaciones_2023-11-01_19_05_28</a></li>`);
+    rankingsList.insertAdjacentHTML("beforeend", `<li><a href="Ranking/corporaciones.html">corporaciones</a></li>`);
 
 });
