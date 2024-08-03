@@ -1,0 +1,855 @@
+
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tabla de Corporaciones</title>
+        <!-- AÃ±adir FontAwesome para los Ã­conos -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <!-- AÃ±adir estilos y scripts para DataTables -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+        <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                padding: 20px;
+                background-color: black;
+                color: white;
+                background: url('https://images4.alphacoders.com/197/197024.jpg') no-repeat center center;
+                background-size: cover;
+            }
+            .dataTables_length label,
+            .dataTables_filter label,
+            .dataTables_info,
+            .dataTables_paginate {
+                color: white !important;
+            }
+            .banner {
+                width: 100%;
+                display: block;
+                margin: 0 auto 20px;
+                border-radius: 8px;
+            }
+            table {
+                width: 80%;
+                border-collapse: collapse;
+                margin: 20px auto;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+            th, td {
+                border: 1px solid #ddd;
+                padding: 8px 12px;
+                text-align: left;
+                background-color: rgba(0, 0, 0, 0.7);
+            }
+            th {
+                background-color: rgba(51, 51, 51, 0.7);
+            }
+            tr:hover {
+                background-color: rgba(68, 68, 68, 0.7);
+            }
+            img {
+                border-radius: 5px;
+            }
+            a:link, a:visited {
+                color: white;
+                text-decoration: none;
+            }
+            a:hover {
+                color: cyan;
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="https://cdn.discordapp.com/attachments/1168139468637732966/1169326948669997156/image.png?ex=6554ff95&is=65428a95&hm=70bc779bdf91ecb6237b4c23fba7cd002fa5fd407d0c53a88379bfc44c366696&" alt="Banner de Corporaciones" class="banner">
+        <div style="text-align:center; font-size: 24px; color: white; margin-bottom: 20px;">2024-08-03 11:30:25</div>
+        <a href="https://www.youtube.com/@eveonlineenespanhol/videos" target="_blank" style="margin-left: 10px;"><i class="fab fa-youtube fa-4x"></i> YouTube</a>
+        <a href="https://discord.gg/su5xAAfR" target="_blank" style="margin-left: 10px;"><i class="fab fa-discord fa-4x"></i> Discord</a>
+        <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>HorpioM Rank</th>
+      <th>Logo</th>
+      <th>Corp</th>
+      <th>Killer</th>
+      <th>K Kills</th>
+      <th>EVE Rank</th>
+      <th>Characters</th>
+      <th>Members</th>
+      <th>(C/M)</th>
+      <th>Ships</th>
+      <th>Points</th>
+      <th>Ratio</th>
+      <th>Kills</th>
+      <th>Losses</th>
+      <th>dBPVP</th>
+      <th>Alliance</th>
+      <th>Data_Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td><img src="https://images.evetech.net/corporations/98660791/logo?size=128" alt="Logo" width="50" height="50"></td>
+      <td><a href='https://zkillboard.com/corporation/98660791/' target='_blank'>Inner Legacy</a></td>
+      <td>Spartan 23</td>
+      <td>242</td>
+      <td>64</td>
+      <td>26</td>
+      <td>178</td>
+      <td>0.146</td>
+      <td>575</td>
+      <td>633</td>
+      <td>1.10</td>
+      <td>217.07</td>
+      <td>5.91</td>
+      <td>-7.048243</td>
+      <td>Pandemic Horde</td>
+      <td>2024-08-03 11:29:48</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><img src="https://images.evetech.net/corporations/98628176/logo?size=128" alt="Logo" width="50" height="50"></td>
+      <td><a href='https://zkillboard.com/corporation/98628176/' target='_blank'>Helgast Militarum</a></td>
+      <td>Treenuss</td>
+      <td>102</td>
+      <td>73</td>
+      <td>86</td>
+      <td>503</td>
+      <td>0.171</td>
+      <td>339</td>
+      <td>621</td>
+      <td>1.83</td>
+      <td>316.63</td>
+      <td>6.91</td>
+      <td>0.000000</td>
+      <td>The Initiative.</td>
+      <td>2024-08-03 11:29:44</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><img src="https://images.evetech.net/corporations/98500968/logo?size=128" alt="Logo" width="50" height="50"></td>
+      <td><a href='https://zkillboard.com/corporation/98500968/' target='_blank'>Cuervos Imperiales</a></td>
+      <td>Debon Stay</td>
+      <td>63</td>
+      <td>204</td>
+      <td>30</td>
+      <td>252</td>
+      <td>0.119</td>
+      <td>299</td>
+      <td>577</td>
+      <td>1.93</td>
+      <td>74.06</td>
+      <td>6.53</td>
+      <td>-14.567055</td>
+      <td>Goonswarm Federation</td>
+      <td>2024-08-03 11:29:45</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td><img src="https://images.evetech.net/corporations/98755123/logo?size=128" alt="Logo" width="50" height="50"></td>
+      <td><a href='https://zkillboard.com/corporation/98755123/' target='_blank'>13 CALAVERAS</a></td>
+      <td>Larson Drak</td>
+      <td>175</td>
+      <td>209</td>
+      <td>14</td>
+      <td>41</td>
+      <td>0.341</td>
+      <td>260</td>
+      <td>639</td>
+      <td>2.46</td>
+      <td>49.14</td>
+      <td>1.25</td>
+      <td>-11.846142</td>
+      <td>SONS of BANE</td>
+      <td>2024-08-03 11:30:20</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td><img src="https://images.evetech.net/corporations/98176563/logo?size=128" alt="Logo" width="50" height="50"></td>
+      <td><a href='https://zkillboard.com/corporation/98176563/' target='_blank'>Rekium</a></td>
+      <td>Esnal Gudaria</td>
+      <td>74</td>
+      <td>268</td>
+      <td>71</td>
+      <td>392</td>
+      <td>0.181</td>
+      <td>327</td>
+      <td>443</td>
+      <td>1.35</td>
+      <td>62.81</td>
+      <td>13.44</td>
+      <td>-5.907465</td>
+      <td>Goonswarm Federation</td>
+      <td>2024-08-03 11:29:41</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td><img src="https://images.evetech.net/corporations/98322623/logo?size=128" alt="Logo" width="50" height="50"></td>
+      <td><a href='https://zkillboard.com/corporation/98322623/' target='_blank'>Interbellum</a></td>
+      <td>Shyla Sertan</td>
+      <td>127</td>
+      <td>315</td>
+      <td>14</td>
+      <td>126</td>
+      <td>0.111</td>
+      <td>220</td>
+      <td>346</td>
+      <td>1.57</td>
+      <td>55.76</td>
+      <td>1.85</td>
+      <td>-28.442702</td>
+      <td>TURBOFEED OR GLORY</td>
+      <td>2024-08-03 11:30:00</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td><img src="https://images.evetech.net/corporations/98700376/logo?size=128" alt="Logo" width="50" height="50"></td>
+      <td><a href='https://zkillboard.com/corporation/98700376/' target='_blank'>Unstoppable legion</a></td>
+      <td>Nox Solidor</td>
+      <td>118</td>
+      <td>420</td>
+      <td>16</td>
+      <td>137</td>
+      <td>0.117</td>
+      <td>218</td>
+      <td>259</td>
+      <td>1.19</td>
+      <td>43.82</td>
+      <td>9.44</td>
+      <td>-30.855949</td>
+      <td>Goonswarm Federation</td>
+      <td>2024-08-03 11:30:09</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td><img src="https://images.evetech.net/corporations/98606395/logo?size=128" alt="Logo" width="50" height="50"></td>
+      <td><a href='https://zkillboard.com/corporation/98606395/' target='_blank'>PICHATRON</a></td>
+      <td>Kalifa Surmia Ederton</td>
+      <td>133</td>
+      <td>438</td>
+      <td>16</td>
+      <td>50</td>
+      <td>0.320</td>
+      <td>218</td>
+      <td>914</td>
+      <td>4.19</td>
+      <td>16.65</td>
+      <td>11.29</td>
+      <td>-13.949676</td>
+      <td>Banderlogs Alliance</td>
+      <td>2024-08-03 11:30:11</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td><img src="https://images.evetech.net/corporations/98569633/logo?size=128" alt="Logo" width="50" height="50"></td>
+      <td><a href='https://zkillboard.com/corporation/98569633/' target='_blank'>Arsenico</a></td>
+      <td>Dark Zaky</td>
+      <td>62</td>
+      <td>467</td>
+      <td>13</td>
+      <td>20</td>
+      <td>0.650</td>
+      <td>118</td>
+      <td>146</td>
+      <td>1.24</td>
+      <td>81.70</td>
+      <td>0.87</td>
+      <td>-26.457059</td>
+      <td>Northern Coalition.</td>
+      <td>2024-08-03 11:29:50</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td><img src="https://images.evetech.net/corporations/98716632/logo?size=128" alt="Logo" width="50" height="50"></td>
+      <td><a href='https://zkillboard.com/corporation/98716632/' target='_blank'>Salamandras Prime</a></td>
+      <td>NekoLi</td>
+      <td>43</td>
+      <td>485</td>
+      <td>20</td>
+      <td>91</td>
+      <td>0.220</td>
+      <td>119</td>
+      <td>371</td>
+      <td>3.12</td>
+      <td>48.51</td>
+      <td>4.12</td>
+      <td>-24.576138</td>
+      <td>Fraternity.</td>
+      <td>2024-08-03 11:30:19</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td><img src="https://images.evetech.net/corporations/98555208/logo?size=128" alt="Logo" width="50" height="50"></td>
+      <td><a href='https://zkillboard.com/corporation/98555208/' target='_blank'>CRUZADOS</a></td>
+      <td>Melwidh</td>
+      <td>115</td>
+      <td>601</td>
+      <td>10</td>
+      <td>125</td>
+      <td>0.080</td>
+      <td>149</td>
+      <td>149</td>
+      <td>1.00</td>
+      <td>35.81</td>
+      <td>3.95</td>
+      <td>-45.546479</td>
+      <td>Goonswarm Federation</td>
+      <td>2024-08-03 11:29:43</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td><img src="https://images.evetech.net/corporations/98493825/logo?size=128" alt="Logo" width="50" height="50"></td>
+      <td><a href='https://zkillboard.com/corporation/98493825/' target='_blank'>Los violentos de Kenny</a></td>
+      <td>Killer Rasta</td>
+      <td>118</td>
+      <td>662</td>
+      <td>2</td>
+      <td>21</td>
+      <td>0.095</td>
+      <td>130</td>
+      <td>376</td>
+      <td>2.89</td>
+      <td>5.78</td>
+      <td>0.50</td>
+      <td>-50.968080</td>
+      <td>Sedition.</td>
+      <td>2024-08-03 11:30:21</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td><img src="https://images.evetech.net/corporations/98486133/logo?size=128" alt="Logo" width="50" height="50"></td>
+      <td><a href='https://zkillboard.com/corporation/98486133/' target='_blank'>SQUAD V</a></td>
+      <td>Robyt Sanabria</td>
+      <td>50</td>
+      <td>693</td>
+      <td>6</td>
+      <td>60</td>
+      <td>0.100</td>
+      <td>76</td>
+      <td>76</td>
+      <td>1.00</td>
+      <td>74.11</td>
+      <td>0.17</td>
+      <td>-58.851215</td>
+      <td>Northern Coalition.</td>
+      <td>2024-08-03 11:30:06</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td><img src="https://images.evetech.net/corporations/1534127548/logo?size=128" alt="Logo" width="50" height="50"></td>
+      <td><a href='https://zkillboard.com/corporation/1534127548/' target='_blank'>FW Scuad</a></td>
+      <td>Parca WhoCares</td>
+      <td>45</td>
+      <td>814</td>
+      <td>9</td>
+      <td>230</td>
+      <td>0.039</td>
+      <td>98</td>
+      <td>111</td>
+      <td>1.13</td>
+      <td>25.40</td>
+      <td>1.45</td>
+      <td>-58.442978</td>
+      <td>FuriaHispana.</td>
+      <td>2024-08-03 11:29:57</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td><img src="https://images.evetech.net/corporations/98052373/logo?size=128" alt="Logo" width="50" height="50"></td>
+      <td><a href='https://zkillboard.com/corporation/98052373/' target='_blank'>I N T I</a></td>
+      <td>Dr Chantada</td>
+      <td>136</td>
+      <td>824</td>
+      <td>7</td>
+      <td>20</td>
+      <td>0.350</td>
+      <td>82</td>
+      <td>268</td>
+      <td>3.27</td>
+      <td>5.76</td>
+      <td>0.82</td>
+      <td>-36.160659</td>
+      <td>Reeloaded.</td>
+      <td>2024-08-03 11:29:51</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td><img src="https://images.evetech.net/corporations/98745839/logo?size=128" alt="Logo" width="50" height="50"></td>
+      <td><a href='https://zkillboard.com/corporation/98745839/' target='_blank'>Anarchist Order</a></td>
+      <td>Yhon sito</td>
+      <td>37</td>
+      <td>828</td>
+      <td>35</td>
+      <td>94</td>
+      <td>0.372</td>
+      <td>124</td>
+      <td>158</td>
+      <td>1.27</td>
+      <td>19.19</td>
+      <td>9.59</td>
+      <td>-25.005462</td>
+      <td>Sigma Grindset</td>
+      <td>2024-08-03 11:30:15</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td><img src="https://images.evetech.net/corporations/98751569/logo?size=128" alt="Logo" width="50" height="50"></td>
+      <td><a href='https://zkillboard.com/corporation/98751569/' target='_blank'>La Flota Carmesi</a></td>
+      <td>Pablo Chocolinas</td>
+      <td>72</td>
+      <td>894</td>
+      <td>18</td>
+      <td>72</td>
+      <td>0.250</td>
+      <td>103</td>
+      <td>171</td>
+      <td>1.66</td>
+      <td>18.71</td>
+      <td>3.15</td>
+      <td>-32.997497</td>
+      <td>FuriaHispana.</td>
+      <td>2024-08-03 11:30:23</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td><img src="https://images.evetech.net/corporations/98775577/logo?size=128" alt="Logo" width="50" height="50"></td>
+      <td><a href='https://zkillboard.com/corporation/98775577/' target='_blank'>Exiliados</a></td>
+      <td>joselgames</td>
+      <td>41</td>
+      <td>906</td>
+      <td>22</td>
+      <td>138</td>
+      <td>0.159</td>
+      <td>97</td>
+      <td>117</td>
+      <td>1.21</td>
+      <td>17.14</td>
+      <td>1.89</td>
+      <td>-38.536967</td>
+      <td>Sigma Grindset</td>
+      <td>2024-08-03 11:30:25</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td><img src="https://images.evetech.net/corporations/98694805/logo?size=128" alt="Logo" width="50" height="50"></td>
+      <td><a href='https://zkillboard.com/corporation/98694805/' target='_blank'>Spectrum.</a></td>
+      <td>The Lolomito</td>
+      <td>21</td>
+      <td>989</td>
+      <td>7</td>
+      <td>134</td>
+      <td>0.052</td>
+      <td>39</td>
+      <td>148</td>
+      <td>3.79</td>
+      <td>6.92</td>
+      <td>0.21</td>
+      <td>-63.398209</td>
+      <td>Fraternity.</td>
+      <td>2024-08-03 11:29:56</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td><img src="https://images.evetech.net/corporations/98685630/logo?size=128" alt="Logo" width="50" height="50"></td>
+      <td><a href='https://zkillboard.com/corporation/98685630/' target='_blank'>Raccoon Covenant</a></td>
+      <td>Oibara</td>
+      <td>22</td>
+      <td>1033</td>
+      <td>23</td>
+      <td>122</td>
+      <td>0.189</td>
+      <td>57</td>
+      <td>78</td>
+      <td>1.37</td>
+      <td>35.57</td>
+      <td>1.54</td>
+      <td>-44.293721</td>
+      <td>Fraternity.</td>
+      <td>2024-08-03 11:30:18</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td><img src="https://images.evetech.net/corporations/98636089/logo?size=128" alt="Logo" width="50" height="50"></td>
+      <td><a href='https://zkillboard.com/corporation/98636089/' target='_blank'>Hispanic Revolution</a></td>
+      <td>Evangeline Shimada</td>
+      <td>30</td>
+      <td>1107</td>
+      <td>28</td>
+      <td>155</td>
+      <td>0.181</td>
+      <td>92</td>
+      <td>131</td>
+      <td>1.42</td>
+      <td>13.02</td>
+      <td>7.32</td>
+      <td>-37.800816</td>
+      <td>FuriaHispana.</td>
+      <td>2024-08-03 11:29:55</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td><img src="https://images.evetech.net/corporations/98732759/logo?size=128" alt="Logo" width="50" height="50"></td>
+      <td><a href='https://zkillboard.com/corporation/98732759/' target='_blank'>Contubernium</a></td>
+      <td>dmedinab</td>
+      <td>31</td>
+      <td>1165</td>
+      <td>8</td>
+      <td>53</td>
+      <td>0.151</td>
+      <td>57</td>
+      <td>64</td>
+      <td>1.12</td>
+      <td>9.02</td>
+      <td>0.16</td>
+      <td>-56.900438</td>
+      <td>Fraternity.</td>
+      <td>2024-08-03 11:30:12</td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td><img src="https://images.evetech.net/corporations/98746877/logo?size=128" alt="Logo" width="50" height="50"></td>
+      <td><a href='https://zkillboard.com/corporation/98746877/' target='_blank'>Flota Imperial</a></td>
+      <td>KAI-GUDA</td>
+      <td>69</td>
+      <td>1167</td>
+      <td>7</td>
+      <td>21</td>
+      <td>0.333</td>
+      <td>89</td>
+      <td>324</td>
+      <td>3.64</td>
+      <td>4.17</td>
+      <td>5.87</td>
+      <td>-40.700602</td>
+      <td>Imperio Galactico.</td>
+      <td>2024-08-03 11:30:17</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td><img src="https://images.evetech.net/corporations/98762880/logo?size=128" alt="Logo" width="50" height="50"></td>
+      <td><a href='https://zkillboard.com/corporation/98762880/' target='_blank'>EVE Online Troll Specialization V</a></td>
+      <td>I Yeramell18 I</td>
+      <td>29</td>
+      <td>1376</td>
+      <td>15</td>
+      <td>19</td>
+      <td>0.789</td>
+      <td>14</td>
+      <td>26</td>
+      <td>1.86</td>
+      <td>14.20</td>
+      <td>0.00</td>
+      <td>-56.936272</td>
+      <td>Input Broadcast</td>
+      <td>2024-08-03 11:30:24</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td><img src="https://images.evetech.net/corporations/98525766/logo?size=128" alt="Logo" width="50" height="50"></td>
+      <td><a href='https://zkillboard.com/corporation/98525766/' target='_blank'>Vanguardia DR</a></td>
+      <td>xXPUNISHERXx</td>
+      <td>13</td>
+      <td>1641</td>
+      <td>16</td>
+      <td>106</td>
+      <td>0.151</td>
+      <td>42</td>
+      <td>44</td>
+      <td>1.05</td>
+      <td>3.79</td>
+      <td>1.42</td>
+      <td>-59.398123</td>
+      <td>Sigma Grindset</td>
+      <td>2024-08-03 11:29:52</td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td><img src="https://images.evetech.net/corporations/98646608/logo?size=128" alt="Logo" width="50" height="50"></td>
+      <td><a href='https://zkillboard.com/corporation/98646608/' target='_blank'>Crack Holes Inc.</a></td>
+      <td>Naomi RK</td>
+      <td>27</td>
+      <td>1729</td>
+      <td>2</td>
+      <td>91</td>
+      <td>0.022</td>
+      <td>27</td>
+      <td>27</td>
+      <td>1.00</td>
+      <td>1.10</td>
+      <td>0.07</td>
+      <td>-100.046903</td>
+      <td>None</td>
+      <td>2024-08-03 11:29:53</td>
+    </tr>
+    <tr>
+      <td>27</td>
+      <td><img src="https://images.evetech.net/corporations/446274610/logo?size=128" alt="Logo" width="50" height="50"></td>
+      <td><a href='https://zkillboard.com/corporation/446274610/' target='_blank'>13th Squadron</a></td>
+      <td>Eifah</td>
+      <td>24</td>
+      <td>1803</td>
+      <td>5</td>
+      <td>59</td>
+      <td>0.085</td>
+      <td>26</td>
+      <td>27</td>
+      <td>1.04</td>
+      <td>1.78</td>
+      <td>0.04</td>
+      <td>-80.351414</td>
+      <td>Fraternity.</td>
+      <td>2024-08-03 11:30:09</td>
+    </tr>
+    <tr>
+      <td>28</td>
+      <td><img src="https://images.evetech.net/corporations/98612164/logo?size=128" alt="Logo" width="50" height="50"></td>
+      <td><a href='https://zkillboard.com/corporation/98612164/' target='_blank'>CENTURIONES IMPERIALES</a></td>
+      <td>darin ifrim</td>
+      <td>29</td>
+      <td>1946</td>
+      <td>15</td>
+      <td>106</td>
+      <td>0.142</td>
+      <td>47</td>
+      <td>58</td>
+      <td>1.23</td>
+      <td>2.99</td>
+      <td>1.93</td>
+      <td>-58.704723</td>
+      <td>Fraternity.</td>
+      <td>2024-08-03 11:29:46</td>
+    </tr>
+    <tr>
+      <td>29</td>
+      <td><img src="https://images.evetech.net/corporations/98740637/logo?size=128" alt="Logo" width="50" height="50"></td>
+      <td><a href='https://zkillboard.com/corporation/98740637/' target='_blank'>Imperio Galactico</a></td>
+      <td>DanielBSS</td>
+      <td>19</td>
+      <td>2125</td>
+      <td>44</td>
+      <td>2444</td>
+      <td>0.018</td>
+      <td>38</td>
+      <td>164</td>
+      <td>4.32</td>
+      <td>2.86</td>
+      <td>2.67</td>
+      <td>-61.485427</td>
+      <td>Imperio Galactico.</td>
+      <td>2024-08-03 11:30:13</td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td><img src="https://images.evetech.net/corporations/98619206/logo?size=128" alt="Logo" width="50" height="50"></td>
+      <td><a href='https://zkillboard.com/corporation/98619206/' target='_blank'>OutLaws Corporation</a></td>
+      <td>Unscared</td>
+      <td>16</td>
+      <td>2188</td>
+      <td>5</td>
+      <td>155</td>
+      <td>0.032</td>
+      <td>16</td>
+      <td>16</td>
+      <td>1.00</td>
+      <td>2.03</td>
+      <td>0.12</td>
+      <td>-97.807821</td>
+      <td>Solyaris Chtonium</td>
+      <td>2024-08-03 11:29:58</td>
+    </tr>
+    <tr>
+      <td>31</td>
+      <td><img src="https://images.evetech.net/corporations/98678807/logo?size=128" alt="Logo" width="50" height="50"></td>
+      <td><a href='https://zkillboard.com/corporation/98678807/' target='_blank'>Settlers Inc.</a></td>
+      <td>Cardian</td>
+      <td>9</td>
+      <td>3194</td>
+      <td>10</td>
+      <td>71</td>
+      <td>0.141</td>
+      <td>15</td>
+      <td>66</td>
+      <td>4.40</td>
+      <td>0.27</td>
+      <td>4.14</td>
+      <td>-91.000780</td>
+      <td>U L T I M A T U M</td>
+      <td>2024-08-03 11:30:05</td>
+    </tr>
+    <tr>
+      <td>32</td>
+      <td><img src="https://images.evetech.net/corporations/98451523/logo?size=128" alt="Logo" width="50" height="50"></td>
+      <td><a href='https://zkillboard.com/corporation/98451523/' target='_blank'>Area-52</a></td>
+      <td>Ferrus Overkill</td>
+      <td>1</td>
+      <td>3827</td>
+      <td>2</td>
+      <td>146</td>
+      <td>0.014</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1.00</td>
+      <td>0.19</td>
+      <td>0.02</td>
+      <td>-163.606286</td>
+      <td>Fraternity.</td>
+      <td>2024-08-03 11:30:07</td>
+    </tr>
+  </tbody>
+<tfoot><tr><td></td><th></th><th></th><th></th><th></th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th></th><th></th></tr></tfoot></table>
+    <script>
+        $(document).ready(function() {
+            var table = $('table').DataTable();
+            
+            // Especificar las columnas que deseas sumar
+            var columnsToSum = [4,6,7,9,10,12,13];
+
+            // FunciÃ³n para actualizar la fila de sumas
+            function updateFooter() {
+                columnsToSum.forEach(function(index) {
+                    if (table.column(index).footer()) {
+                        var sum = table.column(index, { search:'applied' }).data()
+                            .reduce(function(a, b) {
+                                var x = parseFloat(a) || 0;
+                                var y = parseFloat(b) || 0;
+                                return x + y;
+                            }, 0);
+                         // Redondear a dos decimales si la columna es 12 o 13
+                    
+                    if (index === 12 || index === 13) {
+                        sum = sum.toFixed(2);
+                    }
+                   
+                        $(table.column(index).footer()).html(sum);
+                    }
+                });
+            }
+
+            // Llamar a updateFooter despuÃ©s de cada evento de filtrado
+            table.on('search.dt', function() {
+                updateFooter();
+            });
+
+            // Actualizar la fila de sumas al inicio
+            updateFooter();
+        });
+    </script>
+<!-- Contenedor para la grÃ¡fica de barras -->
+        <div style="width:80%; margin: 20px auto;">
+            <!-- Se crean mÃºltiples elementos canvas para cada grÃ¡fico -->
+            
+            <canvas id="killsChart"></canvas>
+             
+            <canvas id="lossesChart"></canvas>
+             
+            <canvas id="shipsChart"></canvas>
+            
+            <canvas id="pointsChart"></canvas>
+           
+           <canvas id="charactersChart"></canvas>
+             
+        </div>
+
+        
+<!-- Incluir la cadena JSON directamente en un script para ser utilizada por JavaScript -->
+        <script type="text/javascript">
+    var jsonData = JSON.parse("[{\"Corp\":\"Rekium\",\"EVE Rank\":\"268\",\"Characters\":71,\"Members\":392,\"Ships\":327,\"Points\":443,\"Kills\":62.81,\"Losses\":13.44},{\"Corp\":\"CRUZADOS\",\"EVE Rank\":\"601\",\"Characters\":10,\"Members\":125,\"Ships\":149,\"Points\":149,\"Kills\":35.81,\"Losses\":3.95},{\"Corp\":\"Helgast Militarum\",\"EVE Rank\":\"73\",\"Characters\":86,\"Members\":503,\"Ships\":339,\"Points\":621,\"Kills\":316.63,\"Losses\":6.91},{\"Corp\":\"Cuervos Imperiales\",\"EVE Rank\":\"204\",\"Characters\":30,\"Members\":252,\"Ships\":299,\"Points\":577,\"Kills\":74.06,\"Losses\":6.53},{\"Corp\":\"CENTURIONES IMPERIALES\",\"EVE Rank\":\"1,946\",\"Characters\":15,\"Members\":106,\"Ships\":47,\"Points\":58,\"Kills\":2.99,\"Losses\":1.93},{\"Corp\":\"Inner Legacy\",\"EVE Rank\":\"64\",\"Characters\":26,\"Members\":178,\"Ships\":575,\"Points\":633,\"Kills\":217.07,\"Losses\":5.91},{\"Corp\":\"Arsenico\",\"EVE Rank\":\"467\",\"Characters\":13,\"Members\":20,\"Ships\":118,\"Points\":146,\"Kills\":81.7,\"Losses\":0.87},{\"Corp\":\"I N T I\",\"EVE Rank\":\"824\",\"Characters\":7,\"Members\":20,\"Ships\":82,\"Points\":268,\"Kills\":5.76,\"Losses\":0.82},{\"Corp\":\"Vanguardia DR\",\"EVE Rank\":\"1,641\",\"Characters\":16,\"Members\":106,\"Ships\":42,\"Points\":44,\"Kills\":3.79,\"Losses\":1.42},{\"Corp\":\"Crack Holes Inc.\",\"EVE Rank\":\"1,729\",\"Characters\":2,\"Members\":91,\"Ships\":27,\"Points\":27,\"Kills\":1.1,\"Losses\":0.07},{\"Corp\":\"Hispanic Revolution\",\"EVE Rank\":\"1,107\",\"Characters\":28,\"Members\":155,\"Ships\":92,\"Points\":131,\"Kills\":13.02,\"Losses\":7.32},{\"Corp\":\"Spectrum.\",\"EVE Rank\":\"989\",\"Characters\":7,\"Members\":134,\"Ships\":39,\"Points\":148,\"Kills\":6.92,\"Losses\":0.21},{\"Corp\":\"FW Scuad\",\"EVE Rank\":\"814\",\"Characters\":9,\"Members\":230,\"Ships\":98,\"Points\":111,\"Kills\":25.4,\"Losses\":1.45},{\"Corp\":\"OutLaws Corporation\",\"EVE Rank\":\"2,188\",\"Characters\":5,\"Members\":155,\"Ships\":16,\"Points\":16,\"Kills\":2.03,\"Losses\":0.12},{\"Corp\":\"Interbellum\",\"EVE Rank\":\"315\",\"Characters\":14,\"Members\":126,\"Ships\":220,\"Points\":346,\"Kills\":55.76,\"Losses\":1.85},{\"Corp\":\"Settlers Inc.\",\"EVE Rank\":\"3,194\",\"Characters\":10,\"Members\":71,\"Ships\":15,\"Points\":66,\"Kills\":0.27,\"Losses\":4.14},{\"Corp\":\"SQUAD V\",\"EVE Rank\":\"693\",\"Characters\":6,\"Members\":60,\"Ships\":76,\"Points\":76,\"Kills\":74.11,\"Losses\":0.17},{\"Corp\":\"Area-52\",\"EVE Rank\":\"3,827\",\"Characters\":2,\"Members\":146,\"Ships\":1,\"Points\":1,\"Kills\":0.19,\"Losses\":0.02},{\"Corp\":\"13th Squadron\",\"EVE Rank\":\"1,803\",\"Characters\":5,\"Members\":59,\"Ships\":26,\"Points\":27,\"Kills\":1.78,\"Losses\":0.04},{\"Corp\":\"Unstoppable legion\",\"EVE Rank\":\"420\",\"Characters\":16,\"Members\":137,\"Ships\":218,\"Points\":259,\"Kills\":43.82,\"Losses\":9.44},{\"Corp\":\"PICHATRON\",\"EVE Rank\":\"438\",\"Characters\":16,\"Members\":50,\"Ships\":218,\"Points\":914,\"Kills\":16.65,\"Losses\":11.29},{\"Corp\":\"Contubernium\",\"EVE Rank\":\"1,165\",\"Characters\":8,\"Members\":53,\"Ships\":57,\"Points\":64,\"Kills\":9.02,\"Losses\":0.16},{\"Corp\":\"Imperio Galactico\",\"EVE Rank\":\"2,125\",\"Characters\":44,\"Members\":2444,\"Ships\":38,\"Points\":164,\"Kills\":2.86,\"Losses\":2.67},{\"Corp\":\"Anarchist Order\",\"EVE Rank\":\"828\",\"Characters\":35,\"Members\":94,\"Ships\":124,\"Points\":158,\"Kills\":19.19,\"Losses\":9.59},{\"Corp\":\"Flota Imperial\",\"EVE Rank\":\"1,167\",\"Characters\":7,\"Members\":21,\"Ships\":89,\"Points\":324,\"Kills\":4.17,\"Losses\":5.87},{\"Corp\":\"Raccoon Covenant\",\"EVE Rank\":\"1,033\",\"Characters\":23,\"Members\":122,\"Ships\":57,\"Points\":78,\"Kills\":35.57,\"Losses\":1.54},{\"Corp\":\"Salamandras Prime\",\"EVE Rank\":\"485\",\"Characters\":20,\"Members\":91,\"Ships\":119,\"Points\":371,\"Kills\":48.51,\"Losses\":4.12},{\"Corp\":\"13 CALAVERAS\",\"EVE Rank\":\"209\",\"Characters\":14,\"Members\":41,\"Ships\":260,\"Points\":639,\"Kills\":49.14,\"Losses\":1.25},{\"Corp\":\"Los violentos de Kenny\",\"EVE Rank\":\"662\",\"Characters\":2,\"Members\":21,\"Ships\":130,\"Points\":376,\"Kills\":5.78,\"Losses\":0.5},{\"Corp\":\"La Flota Carmesi\",\"EVE Rank\":\"894\",\"Characters\":18,\"Members\":72,\"Ships\":103,\"Points\":171,\"Kills\":18.71,\"Losses\":3.15},{\"Corp\":\"EVE Online Troll Specialization V\",\"EVE Rank\":\"1,376\",\"Characters\":15,\"Members\":19,\"Ships\":14,\"Points\":26,\"Kills\":14.2,\"Losses\":0.0},{\"Corp\":\"Exiliados\",\"EVE Rank\":\"906\",\"Characters\":22,\"Members\":138,\"Ships\":97,\"Points\":117,\"Kills\":17.14,\"Losses\":1.89}]");
+    
+    // FunciÃ³n para ordenar los datos de acuerdo a la mÃ©trica elegida
+                function sortData(metric) {
+                    return jsonData.sort(function(a, b) {
+                        return b[metric] - a[metric];
+                    });
+                }
+
+                function createChartData(sortedData, metric) {
+                    return sortedData.map(function(item) {
+                        return item[metric];
+                    });
+                }
+
+                function createChart(ctx, label, sortedData, color) {
+                    var data = createChartData(sortedData, label);
+                    var labels = sortedData.map(function(item) {
+                        return item.Corp;
+                    });
+                    ctx.canvas.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+                    return new Chart(ctx, {
+                        type: 'bar',
+                        data: {
+                            labels: labels,
+                            datasets: [{
+                                label: label,
+                                data: data,
+                                backgroundColor: color,
+                                borderColor: color,
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            },
+                            layout: {
+                                padding: {
+                                    top: 10,
+                                    right: 10,
+                                    bottom: 10,
+                                    left: 10
+                                }
+                            },
+                            plugins: {
+                                legend: {
+                                    labels: {
+                                        color: 'white' // Leyenda en blanco
+                                    }
+                                }
+                            },
+                            backgroundColor: 'black',
+                            animation: {
+                                duration: 0 // general animation time
+                            },
+                        }
+                    });
+                }
+
+    // Ordenar los datos por 'Kills' y crear el grÃ¡fico correspondiente
+    var sortedByKills = sortData('Kills');
+    var ctxKills = document.getElementById('killsChart').getContext('2d');
+    var killsChart = createChart(ctxKills, 'Kills', sortedByKills, 'rgba(255, 255, 255, 0.5)');
+
+    // Ordenar los datos por 'Losses' y crear el grÃ¡fico correspondiente
+    var sortedByLosses = sortData('Losses');
+    var ctxLosses = document.getElementById('lossesChart').getContext('2d');
+    var lossesChart = createChart(ctxLosses, 'Losses', sortedByLosses, 'rgba(255, 255, 255, 0.5)');
+    
+    // Ordenar los datos por 'Ships' y crear el grÃ¡fico correspondiente
+    var sortedByShips = sortData('Ships');
+    var ctxShips = document.getElementById('shipsChart').getContext('2d');
+    var shipsChart = createChart(ctxShips, 'Ships', sortedByShips, 'rgba(255, 255, 255, 0.5)');
+      
+    // Ordenar los datos por 'Points' y crear el grÃ¡fico correspondiente
+    var sortedByPoints = sortData('Points');
+    var ctxPoints = document.getElementById('pointsChart').getContext('2d');
+    var pointsChart = createChart(ctxPoints, 'Points', sortedByPoints, 'rgba(255, 255, 255, 0.5)');  
+   
+    // Ordenar los datos por 'Characters' y crear el grÃ¡fico correspondiente
+    var sortedByCharacters = sortData('Characters');
+    var ctxCharacters = document.getElementById('charactersChart').getContext('2d');
+    var charactersChart = createChart(ctxCharacters, 'Characters', sortedByCharacters, 'rgba(255, 255, 255, 0.5)');   
+   
+   
+    // ... Repite la creaciÃ³n de grÃ¡ficos para las mÃ©tricas restantes aquÃ­ ...
+
+
+</script>
+    </body>
+    </html>
+    
