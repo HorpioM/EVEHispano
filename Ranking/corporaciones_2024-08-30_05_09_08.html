@@ -1,0 +1,336 @@
+
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tabla de Corporaciones</title>
+        <!-- AÃ±adir FontAwesome para los Ã­conos -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <!-- AÃ±adir estilos y scripts para DataTables -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+        <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                padding: 20px;
+                background-color: black;
+                color: white;
+                background: url('https://images4.alphacoders.com/197/197024.jpg') no-repeat center center;
+                background-size: cover;
+            }
+            .dataTables_length label,
+            .dataTables_filter label,
+            .dataTables_info,
+            .dataTables_paginate {
+                color: white !important;
+            }
+            .banner {
+                width: 100%;
+                display: block;
+                margin: 0 auto 20px;
+                border-radius: 8px;
+            }
+            table {
+                width: 80%;
+                border-collapse: collapse;
+                margin: 20px auto;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+            th, td {
+                border: 1px solid #ddd;
+                padding: 8px 12px;
+                text-align: left;
+                background-color: rgba(0, 0, 0, 0.7);
+            }
+            th {
+                background-color: rgba(51, 51, 51, 0.7);
+            }
+            tr:hover {
+                background-color: rgba(68, 68, 68, 0.7);
+            }
+            img {
+                border-radius: 5px;
+            }
+            a:link, a:visited {
+                color: white;
+                text-decoration: none;
+            }
+            a:hover {
+                color: cyan;
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="https://cdn.discordapp.com/attachments/1168139468637732966/1169326948669997156/image.png?ex=6554ff95&is=65428a95&hm=70bc779bdf91ecb6237b4c23fba7cd002fa5fd407d0c53a88379bfc44c366696&" alt="Banner de Corporaciones" class="banner">
+        <div style="text-align:center; font-size: 24px; color: white; margin-bottom: 20px;">2024-08-30 05:09:08</div>
+        <a href="https://www.youtube.com/@eveonlineenespanhol/videos" target="_blank" style="margin-left: 10px;"><i class="fab fa-youtube fa-4x"></i> YouTube</a>
+        <a href="https://discord.gg/su5xAAfR" target="_blank" style="margin-left: 10px;"><i class="fab fa-discord fa-4x"></i> Discord</a>
+        <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>HorpioM Rank</th>
+      <th>Logo</th>
+      <th>Corp</th>
+      <th>Killer</th>
+      <th>K Kills</th>
+      <th>EVE Rank</th>
+      <th>Characters</th>
+      <th>Members</th>
+      <th>(C/M)</th>
+      <th>Ships</th>
+      <th>Points</th>
+      <th>Ratio</th>
+      <th>Kills</th>
+      <th>Losses</th>
+      <th>Alliance</th>
+      <th>Data_Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td><img src="https://images.evetech.net/corporations/98176563/logo?size=128" alt="Logo" width="50" height="50"></td>
+      <td><a href='https://zkillboard.com/corporation/98176563/' target='_blank'>Rekium</a></td>
+      <td>None</td>
+      <td>None</td>
+      <td>84</td>
+      <td>84</td>
+      <td>387</td>
+      <td>0.217</td>
+      <td>458</td>
+      <td>667</td>
+      <td>1.46</td>
+      <td>156.50</td>
+      <td>13.31</td>
+      <td>Goonswarm Federation</td>
+      <td>2024-08-30 05:09:06</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><img src="https://images.evetech.net/corporations/98628176/logo?size=128" alt="Logo" width="50" height="50"></td>
+      <td><a href='https://zkillboard.com/corporation/98628176/' target='_blank'>Helgast Militarum</a></td>
+      <td>None</td>
+      <td>None</td>
+      <td>96</td>
+      <td>55</td>
+      <td>524</td>
+      <td>0.105</td>
+      <td>361</td>
+      <td>676</td>
+      <td>1.87</td>
+      <td>143.94</td>
+      <td>13.87</td>
+      <td>The Initiative.</td>
+      <td>2024-08-30 05:09:07</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><img src="https://images.evetech.net/corporations/98500968/logo?size=128" alt="Logo" width="50" height="50"></td>
+      <td><a href='https://zkillboard.com/corporation/98500968/' target='_blank'>Cuervos Imperiales</a></td>
+      <td>None</td>
+      <td>None</td>
+      <td>126</td>
+      <td>34</td>
+      <td>230</td>
+      <td>0.148</td>
+      <td>371</td>
+      <td>763</td>
+      <td>2.06</td>
+      <td>90.48</td>
+      <td>10.55</td>
+      <td>Goonswarm Federation</td>
+      <td>2024-08-30 05:09:08</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td><img src="https://images.evetech.net/corporations/98612164/logo?size=128" alt="Logo" width="50" height="50"></td>
+      <td><a href='https://zkillboard.com/corporation/98612164/' target='_blank'>CENTURIONES IMPERIALES</a></td>
+      <td>None</td>
+      <td>None</td>
+      <td>413</td>
+      <td>10</td>
+      <td>112</td>
+      <td>0.089</td>
+      <td>165</td>
+      <td>264</td>
+      <td>1.60</td>
+      <td>27.78</td>
+      <td>1.69</td>
+      <td>Fraternity.</td>
+      <td>2024-08-30 05:09:08</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td><img src="https://images.evetech.net/corporations/98555208/logo?size=128" alt="Logo" width="50" height="50"></td>
+      <td><a href='https://zkillboard.com/corporation/98555208/' target='_blank'>CRUZADOS</a></td>
+      <td>None</td>
+      <td>None</td>
+      <td>466</td>
+      <td>7</td>
+      <td>123</td>
+      <td>0.057</td>
+      <td>116</td>
+      <td>211</td>
+      <td>1.82</td>
+      <td>41.06</td>
+      <td>1.12</td>
+      <td>Goonswarm Federation</td>
+      <td>2024-08-30 05:09:07</td>
+    </tr>
+  </tbody>
+<tfoot><tr><td></td><th></th><th></th><th></th><th></th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th></th><th></th></tr></tfoot></table>
+    <script>
+        $(document).ready(function() {
+            var table = $('table').DataTable();
+            
+            // Especificar las columnas que deseas sumar
+            var columnsToSum = [4,6,7,9,10,12,13];
+
+            // FunciÃ³n para actualizar la fila de sumas
+            function updateFooter() {
+                columnsToSum.forEach(function(index) {
+                    if (table.column(index).footer()) {
+                        var sum = table.column(index, { search:'applied' }).data()
+                            .reduce(function(a, b) {
+                                var x = parseFloat(a) || 0;
+                                var y = parseFloat(b) || 0;
+                                return x + y;
+                            }, 0);
+                         // Redondear a dos decimales si la columna es 12 o 13
+                    
+                    if (index === 12 || index === 13) {
+                        sum = sum.toFixed(2);
+                    }
+                   
+                        $(table.column(index).footer()).html(sum);
+                    }
+                });
+            }
+
+            // Llamar a updateFooter despuÃ©s de cada evento de filtrado
+            table.on('search.dt', function() {
+                updateFooter();
+            });
+
+            // Actualizar la fila de sumas al inicio
+            updateFooter();
+        });
+    </script>
+<!-- Contenedor para la grÃ¡fica de barras -->
+        <div style="width:80%; margin: 20px auto;">
+            <!-- Se crean mÃºltiples elementos canvas para cada grÃ¡fico -->
+            
+            <canvas id="killsChart"></canvas>
+             
+            <canvas id="lossesChart"></canvas>
+             
+            <canvas id="shipsChart"></canvas>
+            
+            <canvas id="pointsChart"></canvas>
+           
+           <canvas id="charactersChart"></canvas>
+             
+        </div>
+
+        
+<!-- Incluir la cadena JSON directamente en un script para ser utilizada por JavaScript -->
+        <script type="text/javascript">
+    var jsonData = JSON.parse("[{\"Logo\":\"https:\\/\\/images.evetech.net\\/corporations\\/98176563\\/logo?size=128\",\"Corp\":\"Rekium\",\"Killer\":null,\"K Kills\":null,\"EVE Rank\":\"84\",\"Characters\":84,\"Members\":387,\"(C\\/M)\":0.217,\"Ships\":458,\"Points\":667,\"Ratio\":1.46,\"Kills\":156.5,\"Losses\":13.31,\"Alliance\":\"Goonswarm Federation\",\"Data_Time\":\"2024-08-30 05:09:06\"},{\"Logo\":\"https:\\/\\/images.evetech.net\\/corporations\\/98555208\\/logo?size=128\",\"Corp\":\"CRUZADOS\",\"Killer\":null,\"K Kills\":null,\"EVE Rank\":\"466\",\"Characters\":7,\"Members\":123,\"(C\\/M)\":0.057,\"Ships\":116,\"Points\":211,\"Ratio\":1.82,\"Kills\":41.06,\"Losses\":1.12,\"Alliance\":\"Goonswarm Federation\",\"Data_Time\":\"2024-08-30 05:09:07\"},{\"Logo\":\"https:\\/\\/images.evetech.net\\/corporations\\/98628176\\/logo?size=128\",\"Corp\":\"Helgast Militarum\",\"Killer\":null,\"K Kills\":null,\"EVE Rank\":\"96\",\"Characters\":55,\"Members\":524,\"(C\\/M)\":0.105,\"Ships\":361,\"Points\":676,\"Ratio\":1.87,\"Kills\":143.94,\"Losses\":13.87,\"Alliance\":\"The Initiative.\",\"Data_Time\":\"2024-08-30 05:09:07\"},{\"Logo\":\"https:\\/\\/images.evetech.net\\/corporations\\/98500968\\/logo?size=128\",\"Corp\":\"Cuervos Imperiales\",\"Killer\":null,\"K Kills\":null,\"EVE Rank\":\"126\",\"Characters\":34,\"Members\":230,\"(C\\/M)\":0.148,\"Ships\":371,\"Points\":763,\"Ratio\":2.06,\"Kills\":90.48,\"Losses\":10.55,\"Alliance\":\"Goonswarm Federation\",\"Data_Time\":\"2024-08-30 05:09:08\"},{\"Logo\":\"https:\\/\\/images.evetech.net\\/corporations\\/98612164\\/logo?size=128\",\"Corp\":\"CENTURIONES IMPERIALES\",\"Killer\":null,\"K Kills\":null,\"EVE Rank\":\"413\",\"Characters\":10,\"Members\":112,\"(C\\/M)\":0.089,\"Ships\":165,\"Points\":264,\"Ratio\":1.6,\"Kills\":27.78,\"Losses\":1.69,\"Alliance\":\"Fraternity.\",\"Data_Time\":\"2024-08-30 05:09:08\"}]");
+    
+    // FunciÃ³n para ordenar los datos de acuerdo a la mÃ©trica elegida
+                function sortData(metric) {
+                    return jsonData.sort(function(a, b) {
+                        return b[metric] - a[metric];
+                    });
+                }
+
+                function createChartData(sortedData, metric) {
+                    return sortedData.map(function(item) {
+                        return item[metric];
+                    });
+                }
+
+                function createChart(ctx, label, sortedData, color) {
+                    var data = createChartData(sortedData, label);
+                    var labels = sortedData.map(function(item) {
+                        return item.Corp;
+                    });
+                    ctx.canvas.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+                    return new Chart(ctx, {
+                        type: 'bar',
+                        data: {
+                            labels: labels,
+                            datasets: [{
+                                label: label,
+                                data: data,
+                                backgroundColor: color,
+                                borderColor: color,
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            },
+                            layout: {
+                                padding: {
+                                    top: 10,
+                                    right: 10,
+                                    bottom: 10,
+                                    left: 10
+                                }
+                            },
+                            plugins: {
+                                legend: {
+                                    labels: {
+                                        color: 'white' // Leyenda en blanco
+                                    }
+                                }
+                            },
+                            backgroundColor: 'black',
+                            animation: {
+                                duration: 0 // general animation time
+                            },
+                        }
+                    });
+                }
+
+    // Ordenar los datos por 'Kills' y crear el grÃ¡fico correspondiente
+    var sortedByKills = sortData('Kills');
+    var ctxKills = document.getElementById('killsChart').getContext('2d');
+    var killsChart = createChart(ctxKills, 'Kills', sortedByKills, 'rgba(255, 255, 255, 0.5)');
+
+    // Ordenar los datos por 'Losses' y crear el grÃ¡fico correspondiente
+    var sortedByLosses = sortData('Losses');
+    var ctxLosses = document.getElementById('lossesChart').getContext('2d');
+    var lossesChart = createChart(ctxLosses, 'Losses', sortedByLosses, 'rgba(255, 255, 255, 0.5)');
+    
+    // Ordenar los datos por 'Ships' y crear el grÃ¡fico correspondiente
+    var sortedByShips = sortData('Ships');
+    var ctxShips = document.getElementById('shipsChart').getContext('2d');
+    var shipsChart = createChart(ctxShips, 'Ships', sortedByShips, 'rgba(255, 255, 255, 0.5)');
+      
+    // Ordenar los datos por 'Points' y crear el grÃ¡fico correspondiente
+    var sortedByPoints = sortData('Points');
+    var ctxPoints = document.getElementById('pointsChart').getContext('2d');
+    var pointsChart = createChart(ctxPoints, 'Points', sortedByPoints, 'rgba(255, 255, 255, 0.5)');  
+   
+    // Ordenar los datos por 'Characters' y crear el grÃ¡fico correspondiente
+    var sortedByCharacters = sortData('Characters');
+    var ctxCharacters = document.getElementById('charactersChart').getContext('2d');
+    var charactersChart = createChart(ctxCharacters, 'Characters', sortedByCharacters, 'rgba(255, 255, 255, 0.5)');   
+   
+   
+    // ... Repite la creaciÃ³n de grÃ¡ficos para las mÃ©tricas restantes aquÃ­ ...
+
+
+</script>
+    </body>
+    </html>
+    
